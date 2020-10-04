@@ -34,9 +34,10 @@ double calcularExponencial(int n,double x);
 double calcularFactorial(double n)
 {
     double fac = 1;
-    for (int i = 1; i <= n; i++)
+    while (n > 0)
     {
-        fac = fac * i;
+        fac = fac * n;
+        n--;
     }
     return fac;
 }
@@ -49,9 +50,10 @@ double calcularFactorial(double n)
 double pot(double x,double y)
 {
     double resultado=1;
-    for (int i = 0; i < y; i++)
+    while (y > 0)
     {
         resultado = resultado*x;
+        y--;
     }
     return resultado;
 }
@@ -65,9 +67,10 @@ double pot(double x,double y)
 double calcularExponencial(int n,double x)
 {
     double suma = 1;
-    for (int i = n; i > 0; i--)
+    while (n > 0)
     {
-        suma = suma + (pot(x,i)/calcularFactorial(i));
+        suma = suma + (pot(x,n)/calcularFactorial(n));
+        n--;
     }
     return suma;
 }

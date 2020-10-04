@@ -31,13 +31,17 @@ void imprimirTablasMultiplicar(int ini,int fin);
 void imprimirTablasMultiplicar(int ini,int fin)
 {
     printf("\r\tTablas de Multiplicar\n");
-    for (int i = ini; i <= fin; i++)
+    int i = ini;
+    while (i <= fin)
     {
         printf("\n\n\tTabla del #%i\n",i);
-        for (int j = 1; j <= fin; j++)
+        int j = 1;
+        while (j <= fin)
         {
             printf("\n%i X %i = %i",i,j,(i*j));
+            j++;
         }
+        i++;
     }
 }
 // declaración de la función principal

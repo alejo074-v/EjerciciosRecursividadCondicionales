@@ -27,9 +27,9 @@ int sumarFibonacci();
 /*
     Esta función imprime laserie de fibonacci de 0 hasta llegar sin sobrepasar
     el numero 100 y retorna el resultado de sumar cada digito de la serie 
-    hasta llegar a el ultimo digito impreso, tienen 3 variables 
-    que corresponden a los dos digitos con los que inicia la solucion 
-    y a suma de los digitos de la serie
+    hasta llegar a el ultimo digito impreso, tienen 4 variables 
+    que corresponden a los dos digitos con los que inicia la serie,
+    la suma de los digitos de la serie y un aux i=n1+n2
     fibonacci()-> imprime 1 2 3 5 8 13 21 34 55 89, retorna 232
 */
 int sumarFibonacci()
@@ -37,12 +37,14 @@ int sumarFibonacci()
     int n1 = 0, n2 = 1;
     int suma = n1+n2;
     printf("%i %i ",n1,n2);
-    for (int i = n1+n2; i < 100; i=n1+n2)
+    int i = n1+n2;
+    while (i < 100)
     {
         printf("%i ",i);
         suma = suma + i;
         n1 = n2;
         n2 = i;
+        i = n1+n2;
     }
     return suma;
 }

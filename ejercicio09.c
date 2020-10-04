@@ -53,7 +53,8 @@ void generarTernasEnteros();
 */
 void generarTernasEnteros()
 {
-    for (int i = 1, j = 1, l = 1; i < 10; i++,l++)
+    int i = 1, j = 1, l = 1;
+    while (i < 10)
     {
         printf("%i ",i);
         printf("%i ",j);
@@ -63,6 +64,7 @@ void generarTernasEnteros()
             j++;
             l=0;
         }
+        i++,l++;
     }
 }
 // declaración de la función principal

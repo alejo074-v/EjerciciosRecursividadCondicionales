@@ -38,12 +38,14 @@ void imprimirEspacios(int n);
 */
 void imprimirAA(int numEspacios,int numEspaciosLateral)
 {
-    for (int i = 0; i < 11; i++)
+    int i = 0;
+    while (i < 11)
     {
         imprimirEspacios(numEspaciosLateral);
         printf("A");
         imprimirEspacios(numEspacios);
         printf("A\n");
+        i++;
         numEspacios= numEspacios-2;
         numEspaciosLateral= numEspaciosLateral+1;
     }
@@ -56,9 +58,10 @@ void imprimirAA(int numEspacios,int numEspaciosLateral)
 */
 void imprimirEspacios(int n)
 {
-    for (int i = 0; i < n; i++)
+    while (n > 0)
     {
         printf(" ");
+        n--;
     }
 }
 // declaración de la función principal
