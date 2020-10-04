@@ -33,10 +33,11 @@ void calcularFactorial(double n)
     if (n >=0 )
     {
         double fac = 1;
-        for (int i = 1; i <= n; i++)
-        {
+        int i = 1;
+        do{
             fac = fac * i;
-        }
+            i++;
+        } while (i <= n);
         printf("%.2lf ",fac);
     }
     else

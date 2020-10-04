@@ -55,15 +55,16 @@ void generarParejasEnteros();
 */
 void generarParejasEnteros()
 {
-    for (int i = 0, j = 1; i < 10; i++)
-    {
+    int i = 0, j = 1;
+    do{
         printf("%i ",i);
         printf("%i\n",j);
         if (((i+1)%2)==0)
         {
             j++;
         }
-    }
+        i++;
+    } while (i < 10);
 }
 // declaración de la función principal
 int main ()

@@ -30,22 +30,23 @@ de la serie, así: 0 1 1 2 3 5 8 13 21 34.......*/
 void fibonacci();
 /*
     Esta función imprime los numeros de la serie Fibonacci
-    contiene dos variables que son los dos primeros digitos 
-    de la secuencia y a partir de ellos en una estructura for
-    va generando el siguiente, sumando los dos ultimos digitos
-    para generar el siguiente
+    contiene tres variables que son un aux i=n1+n2 y los dos 
+    primeros digitos de la secuencia y a partir de ellos en una
+    estructura for va generando el siguiente, sumando los dos 
+    ultimos digitos para generar el siguiente.
     fibonacci()-> 0 1 1 2 3 5 8 13 21 34.......
 */
 void fibonacci()
 {
     int n1 = 0, n2 = 1;
     printf("%i %i ",n1,n2);
-    for (int i = n1+n2; i < 10000; i=n1+n2)
-    {
+    int i =n1+n2;
+    do{
         printf("%i ",i);
         n1 = n2;
         n2 = i;
-    }
+        i = n1+n2;
+    } while (i < 10000);
 }
 // declaración de la función principal
 int main ()

@@ -37,14 +37,15 @@ void imprimirEspacios(int n);
 */
 void imprimirPantalla(int nChar,int nEspacios,int nEspaciosLateral)
 {
-    for (int i = nEspacios; i > 1; i=i-2,nEspaciosLateral++)
-    {
+    do{
         imprimirEspacios(nEspaciosLateral);
         imprimirZ(nChar);
-        imprimirEspacios(i);
+        imprimirEspacios(nEspacios);
         imprimirZ(nChar);
         printf("\n");
-    }
+        nEspacios = nEspacios-2;
+        nEspaciosLateral++;
+    } while (nEspacios > 1);
     imprimirEspacios(nEspaciosLateral+1);
     imprimirZ(nChar);
 }
@@ -56,9 +57,12 @@ void imprimirPantalla(int nChar,int nEspacios,int nEspaciosLateral)
 */
 void imprimirZ(int n)
 {
-    for (int i = 0; i < n; i++)
+    if (n>0)
     {
-        printf("%c",90);
+        do{
+            printf("%c",90);
+            n--;
+        } while (n > 0);
     }
 }
 /*
@@ -69,9 +73,12 @@ void imprimirZ(int n)
 */
 void imprimirEspacios(int n)
 {
-    for (int i = 0; i < n; i++)
+    if (n>0)
     {
-        printf(" ");
+        do{
+            printf(" ");
+            n--;
+        } while (n > 0);
     }
 }
 // declaración de la función principal

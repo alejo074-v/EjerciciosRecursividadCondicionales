@@ -45,14 +45,15 @@ void imprimirPromedioNumerosPositivos(int array[])
 {
     int cont = 0;
     int suma = 0;
-    for (int i = 0; i < 75; i++)
-    {
+    int i = 0;
+    do{
         if (array[i] > 0)
         {
             suma = suma + array[i];
             cont++;
         }
-    }
+        i++;
+    } while (i < 75);
     printf("\nEl promedio de los números positivos es: %i",(suma/cont));
 }
 /*
@@ -64,13 +65,14 @@ void imprimirPromedioNumerosPositivos(int array[])
 void imprimirCantidadNumerosNegativos(int array[])
 {
     int cont = 0;
-    for (int i = 0; i < 75; i++)
-    {
+    int i = 0;
+    do{
         if (array[i] < 0)
         {
             cont++;
         }
-    }
+        i++;
+    } while (i < 75);
     printf("\nLa cantidad de números negativos es: %i",cont);
 }
 /*
@@ -84,8 +86,8 @@ void imprimirNumeroMayorYMenor(int array[])
 {
     int menor = array[0];
     int mayor = 0;
-    for (int i = 0; i < 75; i++)
-    {
+    int i = 0;
+    do{
         if (array[i] >= mayor)
         {
             mayor = array[i];
@@ -94,7 +96,8 @@ void imprimirNumeroMayorYMenor(int array[])
         {
             menor = array[i];
         }
-    }
+        i++;
+    } while (i < 75);
     printf("\nEl número mayor es: %i",mayor);
     printf("\nEl número menor es: %i",menor);
 }
@@ -108,13 +111,14 @@ void imprimirNumeroMayorYMenor(int array[])
 void imprimirCantidadNumerosMayores(int array[],int n)
 {
     int cont = 0;
-    for (int i = 0; i < n; i++)
-    {
+    int i = 0;
+    do{
         if (array[i] > 150)
         {
             cont++;
         }
-    }
+        i++;
+    } while (i < 75);
     printf("\nLa cantidad de números mayores a 150 es: %i",cont);
 }
 /*
@@ -125,8 +129,8 @@ void imprimirCantidadNumerosMayores(int array[],int n)
 */
 void leerNumeros(int array[])
 {
-    for (int i = 0; i < 75; i++)
-    {
+    int i = 0;
+    do{
         printf("\n\ringrese un número: ");
         scanf("%i",&array[i]);
         if (array[i] == 0)
@@ -134,7 +138,8 @@ void leerNumeros(int array[])
             printf("\n\t!Solo puede ingresar números diferentes de cero¡\nIntentalo de nuevo.\n");
             i--;
         }
-    }
+        i++;
+    } while (i < 75);
 }
 // declaración de la función principal
 int main ()

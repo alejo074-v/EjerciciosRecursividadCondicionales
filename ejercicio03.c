@@ -27,17 +27,18 @@ int invertirNumero(int num);
 /*
     Esta función recibe un numero como parametro y retorna el mismo
     numero con los digitos invertidos, recibe el numero que se desea
-    invertir, contiene una variable local a la función en la que retorna
-    el numero con los digitos ya invertidos
+    invertir, contiene dos variables locales a la función en la que retorna
+    el numero con los digitos ya invertidos y un aux i=n1+n2
     invertirNumero(45)-> 54
 */
 int invertirNumero(int num)
 {
     int inv = 0;
-    for (int i = num; i > 0; i = i /10)
-    {
+    int i = num;
+    do{
         inv = inv*10+(i%10);
-    }
+        i = i /10;
+    } while (i > 0);
     return inv;
 }
 // declaración de la función principal

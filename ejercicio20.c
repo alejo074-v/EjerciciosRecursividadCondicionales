@@ -34,10 +34,14 @@ double calcularExponencial(int n,double x);
 double calcularFactorial(double n)
 {
     double fac = 1;
-    for (int i = 1; i <= n; i++)
-    {
-        fac = fac * i;
-    }
+    do{
+        fac = fac * n;
+        n=n-1;
+        if (n<0)
+        {
+            fac = 1;
+        }
+    } while (n > 0);
     return fac;
 }
 /*
@@ -49,10 +53,14 @@ double calcularFactorial(double n)
 double pot(double x,double y)
 {
     double resultado=1;
-    for (int i = 0; i < y; i++)
-    {
+    do{
         resultado = resultado*x;
-    }
+        y--;
+        if (y<0)
+        {
+            resultado = 1;
+        }
+    } while (y > 0);
     return resultado;
 }
 /*
@@ -64,11 +72,11 @@ double pot(double x,double y)
 */
 double calcularExponencial(int n,double x)
 {
-    double suma = 1;
-    for (int i = n; i > 0; i--)
-    {
-        suma = suma + (pot(x,i)/calcularFactorial(i));
-    }
+    double suma = 0;
+    do{
+        suma = suma + (pot(x,n)/calcularFactorial(n));
+        n--;
+    } while (n > 0);
     return suma;
 }
 // declaración de la función principal

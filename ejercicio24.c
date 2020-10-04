@@ -35,10 +35,14 @@ double calcularLogaritmoNatural(double x,int n);
 double pot(double x,double y)
 {
     double resultado=1;
-    for (int i = 0; i < y; i++)
-    {
+    do{
         resultado = resultado*x;
-    }
+        y--;
+        if (y<0)
+        {
+            resultado = 1;
+        }
+    } while (y > 0);
     return resultado;
 }
 /*
@@ -50,10 +54,10 @@ double pot(double x,double y)
 double calcularLogaritmoNatural(double x,int n)
 {
     double suma = x-1;
-    for (int i = n; i > 0; i--)
-    {
-        suma = suma + (pot(-1,i)*pot((x-1),(i+1))/(i+1));
-    }
+    do{
+        suma = suma + (pot(-1,n)*pot((x-1),(n+1))/(n+1));
+        n--;
+    } while (n > 0);
     return suma;
 }
 // declaración de la función principal

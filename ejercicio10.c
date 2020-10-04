@@ -38,15 +38,16 @@ void imprimirEspacios(int n);
 */
 void imprimirAA(int numEspacios,int numEspaciosLateral)
 {
-    for (int i = 0; i < 11; i++)
-    {
+    int i = 0;
+    do{
         imprimirEspacios(numEspaciosLateral);
         printf("A");
         imprimirEspacios(numEspacios);
         printf("A\n");
+        i++;
         numEspacios= numEspacios-2;
         numEspaciosLateral= numEspaciosLateral+1;
-    }
+    } while (i < 11);
 }
 /*
     Esta función recibe un numero entero de parametro y imprime
@@ -56,10 +57,14 @@ void imprimirAA(int numEspacios,int numEspaciosLateral)
 */
 void imprimirEspacios(int n)
 {
-    for (int i = 0; i < n; i++)
+    if (n > 0)
     {
-        printf(" ");
+        do{
+            printf(" ");
+            n--;
+        } while (n > 0);
     }
+    
 }
 // declaración de la función principal
 int main ()
