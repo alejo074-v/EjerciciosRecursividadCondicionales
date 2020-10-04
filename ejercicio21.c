@@ -34,9 +34,10 @@ double calcularCosenoX(double x,int m);
 double calcularFactorial(double n)
 {
     double fac = 1;
-    for (int i = 1; i <= n; i++)
+    while (n > 0)
     {
-        fac = fac * i;
+        fac = fac * n;
+        n--;
     }
     return fac;
 }
@@ -49,9 +50,10 @@ double calcularFactorial(double n)
 double pot(double x,double y)
 {
     double resultado=1;
-    for (int i = 0; i < y; i++)
+    while (y > 0)
     {
         resultado = resultado*x;
+        y--;
     }
     return resultado;
 }
@@ -65,9 +67,10 @@ double pot(double x,double y)
 double calcularCosenoX(double x,int m)
 {
     double suma = 1;
-    for (int i = m; i > 0; i--)
+    while (m > 0)
     {
-        suma = suma + (pot(-1,i)*pot(x,(2*i)))/calcularFactorial((2*i));
+        suma = suma + (pot(-1,m)*pot(x,(2*m)))/calcularFactorial((2*m));
+        m--;
     }
     return suma;
 }

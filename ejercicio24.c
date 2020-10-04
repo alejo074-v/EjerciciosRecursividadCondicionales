@@ -35,9 +35,10 @@ double calcularLogaritmoNatural(double x,int n);
 double pot(double x,double y)
 {
     double resultado=1;
-    for (int i = 0; i < y; i++)
+    while (y > 0)
     {
         resultado = resultado*x;
+        y--;
     }
     return resultado;
 }
@@ -50,9 +51,10 @@ double pot(double x,double y)
 double calcularLogaritmoNatural(double x,int n)
 {
     double suma = x-1;
-    for (int i = n; i > 0; i--)
+    while (n > 0)
     {
-        suma = suma + (pot(-1,i)*pot((x-1),(i+1))/(i+1));
+        suma = suma + (pot(-1,n)*pot((x-1),(n+1))/(n+1));
+        n--;
     }
     return suma;
 }

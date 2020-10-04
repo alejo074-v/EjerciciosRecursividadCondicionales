@@ -36,7 +36,8 @@ double sumarFactoriales(double n);
 double leerNumeroPositivo()
 {
     double num = 0;
-    for (int i = 0; i < 1; i++)
+    int i = 0;
+    while (i < 1)
     {
         printf("\nIngrese un n%cmero: ",163);
         scanf("%lf",&num);
@@ -45,6 +46,7 @@ double leerNumeroPositivo()
             printf("\nEl valor debe ser igual o mayor que cero");
             i = -1;
         }
+        i++;
     }
     return num;
 }
@@ -55,9 +57,11 @@ double leerNumeroPositivo()
 double calcularFactorial(double n)
 {
     double fac = 1;
-    for (int i = 1; i <= n; i++)
+    int i = 1;
+    while (i <= n)
     {
         fac = fac * i;
+        i++;
     }
     return fac;
 }
@@ -68,9 +72,11 @@ double calcularFactorial(double n)
 double sumarFactoriales(double n)
 {
     double suma = 0;
-    for (double i = 0; i <= n; i++)
+    double i = 0;
+    while (i <= n)
     {
         suma = suma + calcularFactorial(i);
+        i++;
     }
     return suma;
 }

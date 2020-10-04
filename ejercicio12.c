@@ -38,14 +38,15 @@ void imprimirEspacios(int n);
 */
 void imprimirPantalla(int nChar,int nEspacios,int nCaracter)
 {
-    for (int i = nChar; i > 0; i=i-2)
+    while (nChar > 0)
     {
         imprimirEspacios(nEspacios);
-        imprimirChar(i,nCaracter);
+        imprimirChar(nChar,nCaracter);
         printf("\n");
+        nChar = nChar-2;
         nEspacios=nEspacios+1;
         nCaracter=nCaracter-2;
-    }    
+    }
 }
 /*
     Esta función recibe un numero entero de parametro y imprime
@@ -56,9 +57,10 @@ void imprimirPantalla(int nChar,int nEspacios,int nCaracter)
 */
 void imprimirChar(int n,int nChar)
 {
-    for (int i = 0; i < n; i++)
+    while (n > 0)
     {
         printf("%c",nChar);
+        n--;
     }
 }
 /*
@@ -69,9 +71,10 @@ void imprimirChar(int n,int nChar)
 */
 void imprimirEspacios(int n)
 {
-    for (int i = 0; i < n; i++)
+    while (n > 0)
     {
         printf(" ");
+        n--;
     }
 }
 // declaración de la función principal

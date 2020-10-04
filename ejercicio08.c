@@ -55,7 +55,8 @@ void generarParejasEnteros();
 */
 void generarParejasEnteros()
 {
-    for (int i = 0, j = 1; i < 10; i++)
+    int i = 0, j = 1;
+    while (i < 10)
     {
         printf("%i ",i);
         printf("%i\n",j);
@@ -63,6 +64,7 @@ void generarParejasEnteros()
         {
             j++;
         }
+        i++;
     }
 }
 // declaración de la función principal
